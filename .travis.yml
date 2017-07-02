@@ -1,5 +1,7 @@
-deploy:
-  provider: pages
-  github_token: $GITHUB_TOKEN
-  on:
-    branch: master
+language: node_js
+node_js:
+  - "6"
+before_script:
+  - npm install
+script:
+  - npm run build
